@@ -57,8 +57,7 @@ public:
 	 */
 	Graph( QWidget * _parent, graphStyle _style = Graph::LinearStyle,
 		int _width = 132,
-		int _height = 104,
-		bool readOnly = false
+		int _height = 104
 	);
 	virtual ~Graph() = default;
 
@@ -109,9 +108,6 @@ private:
 
 	bool m_mouseDown;
 	int m_lastCursorX;
-
-	bool m_isReadOnly;
-
 } ;
 
 
