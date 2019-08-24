@@ -37,7 +37,6 @@
 
 class graphModel;
 
-
 class LMMS_EXPORT Graph : public QWidget, public ModelView
 {
 	Q_OBJECT
@@ -58,12 +57,12 @@ public:
 	 */
 	Graph( QWidget * _parent, graphStyle _style = Graph::LinearStyle,
 		int _width = 132,
-		int _height = 104
+		int _height = 104,
+		bool readOnly = false
 	);
 	virtual ~Graph() = default;
 
 	void setForeground( const QPixmap & _pixmap );
-
 
 	void setGraphColor( const QColor );
 
@@ -77,12 +76,13 @@ public:
 		return m_graphStyle;
 	}
 
-
 	inline void setGraphStyle( graphStyle _s )
 	{
 		m_graphStyle = _s;
 		update();
 	}
+
+	bool isReadOnly;
 
 signals:
 	void drawn();
@@ -103,7 +103,6 @@ private:
 
 	void changeSampleAt( int _x, int _y );
 	void drawLineAt( int _x, int _y, int _lastx );
-
 
 	QPixmap m_foreground;
 	QColor m_graphColor;
