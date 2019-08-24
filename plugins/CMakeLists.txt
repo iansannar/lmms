@@ -76,6 +76,7 @@ IF("${PLUGIN_LIST}" STREQUAL "")
 		stereo_enhancer
 		stereo_matrix
 		stk
+		Synchro
 		vst_base
 		vestige
 		VstEffect
