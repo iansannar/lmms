@@ -743,3 +743,7 @@ void graphModel::drawSampleAt( int x, float val )
 	// change sample shape
 	m_samples[x] = val;
 }
+
+
+
+
