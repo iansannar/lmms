@@ -103,6 +103,11 @@ SynchroNote::SynchroNote(NotePlayHandle * nph) :
 	//Empty constructor
 }
 
+SynchroNote::~SynchroNote()
+{
+	//Empty destructor
+}
+
 void SynchroNote::nextStringSample(sampleFrame &outputSample,
 	sample_rate_t sample_rate, float modulationStrength,
 	float modulationAmount, float harmonics, SynchroOscillatorSettings carrier,
